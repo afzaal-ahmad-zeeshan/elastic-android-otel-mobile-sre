@@ -1,0 +1,14 @@
+# Secrets and local config: never commit
+android/telemetry.properties
+android/local.properties
+.env
+
+# Build output and tooling
+.gradle/
+build/
+.idea/
+*.iml
+.venv/
+__pycache__/
+node_modules/
+.DS_Store

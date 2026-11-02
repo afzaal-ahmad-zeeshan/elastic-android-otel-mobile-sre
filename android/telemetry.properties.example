@@ -1,0 +1,14 @@
+# Copy to telemetry.properties (gitignored) and fill in.
+# From an emulator, localhost on your Mac is 10.0.2.2.
+
+# Elasticsearch HTTP endpoint. Used only by the `bare` flavor (_bulk API).
+ES_URL=https://my-deployment.es.us-central1.gcp.cloud.es.io
+ES_API_KEY=
+
+# OTLP/HTTP endpoint (Elastic Cloud managed OTLP endpoint, or an EDOT Collector).
+# Used by the `otel` and `edot` flavors.
+OTLP_ENDPOINT=https://my-deployment.ingest.us-central1.gcp.cloud.es.io:443
+OTLP_API_KEY=
+
+# The task API (backend/server.py). 10.0.2.2 is your Mac from the Android emulator.
+TARGET_BASE_URL=http://10.0.2.2:8080

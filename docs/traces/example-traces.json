@@ -1,0 +1,112 @@
+{
+ "slow_sync": {
+  "trace_id": "2ba89f8b61e08d8846f48a09ca36da91",
+  "spans": [
+   {
+    "@timestamp": "2026-11-01T14:22:40.791Z",
+    "duration": 3106674000,
+    "name": "chaos.delay",
+    "parent_span_id": "de4e9ba456f3db50",
+    "resource": {
+     "attributes": {
+      "service.name": "mobile-demo-backend"
+     }
+    },
+    "span_id": "a2adb1df9f4553b3"
+   },
+   {
+    "@timestamp": "2026-11-01T14:22:40.791Z",
+    "attributes": {
+     "http.response.status_code": 200
+    },
+    "duration": 3106930000,
+    "name": "GET /sync",
+    "parent_span_id": "c77a1af55f905c57",
+    "resource": {
+     "attributes": {
+      "service.name": "mobile-demo-backend"
+     }
+    },
+    "span_id": "de4e9ba456f3db50"
+   },
+   {
+    "@timestamp": "2026-11-01T14:22:40.808Z",
+    "attributes": {
+     "http.response.status_code": 200
+    },
+    "duration": 3108910085,
+    "name": "GET 10.0.2.2:8080",
+    "resource": {
+     "attributes": {
+      "service.name": "mobile-demo-android-edotfull"
+     }
+    },
+    "span_id": "c77a1af55f905c57"
+   },
+   {
+    "@timestamp": "2026-11-01T14:22:43.898Z",
+    "duration": 11000,
+    "name": "store.sync",
+    "parent_span_id": "de4e9ba456f3db50",
+    "resource": {
+     "attributes": {
+      "service.name": "mobile-demo-backend"
+     }
+    },
+    "span_id": "1fa879698d7f793b"
+   }
+  ]
+ },
+ "error": {
+  "trace_id": "3ccf776ec1758081474e6c0316a47e06",
+  "spans": [
+   {
+    "@timestamp": "2026-11-01T14:23:02.609Z",
+    "duration": 106989000,
+    "name": "chaos.delay",
+    "parent_span_id": "70291a8d2f53698d",
+    "resource": {
+     "attributes": {
+      "service.name": "mobile-demo-backend"
+     }
+    },
+    "span_id": "712a6dcc08752919"
+   },
+   {
+    "@timestamp": "2026-11-01T14:23:02.609Z",
+    "attributes": {
+     "http.response.status_code": 500
+    },
+    "duration": 107248000,
+    "name": "GET /sync",
+    "parent_span_id": "0fafb529a833c742",
+    "resource": {
+     "attributes": {
+      "service.name": "mobile-demo-backend"
+     }
+    },
+    "span_id": "70291a8d2f53698d",
+    "status": {
+     "code": "Error"
+    }
+   },
+   {
+    "@timestamp": "2026-11-01T14:23:02.623Z",
+    "attributes": {
+     "http.response.status_code": 500
+    },
+    "duration": 108770917,
+    "name": "GET 10.0.2.2:8080",
+    "resource": {
+     "attributes": {
+      "service.name": "mobile-demo-android-edotfull"
+     }
+    },
+    "span_id": "0fafb529a833c742",
+    "status": {
+     "code": "Error"
+    }
+   }
+  ]
+ }
+}

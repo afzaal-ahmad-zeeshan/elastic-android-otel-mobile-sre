@@ -1,0 +1,195 @@
+{
+  "index_patterns": [
+    "mobile-bare-telemetry*"
+  ],
+  "priority": 200,
+  "template": {
+    "mappings": {
+      "dynamic_templates": [
+        {
+          "strings_as_keywords": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword",
+              "ignore_above": 1024
+            }
+          }
+        }
+      ],
+      "properties": {
+        "@timestamp": {
+          "type": "date"
+        },
+        "event": {
+          "properties": {
+            "name": {
+              "type": "keyword"
+            },
+            "outcome": {
+              "type": "keyword"
+            },
+            "dataset": {
+              "type": "keyword"
+            },
+            "duration": {
+              "type": "long",
+              "meta": {
+                "unit": "ns"
+              }
+            },
+            "duration_ms": {
+              "type": "double",
+              "meta": {
+                "unit": "ms"
+              }
+            }
+          }
+        },
+        "service": {
+          "properties": {
+            "name": {
+              "type": "keyword"
+            },
+            "version": {
+              "type": "keyword"
+            }
+          }
+        },
+        "telemetry": {
+          "properties": {
+            "mode": {
+              "type": "keyword"
+            }
+          }
+        },
+        "user": {
+          "properties": {
+            "id": {
+              "type": "keyword"
+            }
+          }
+        },
+        "app": {
+          "properties": {
+            "persona": {
+              "type": "keyword"
+            },
+            "fault_profile": {
+              "type": "keyword"
+            },
+            "virtual": {
+              "type": "keyword"
+            }
+          }
+        },
+        "os": {
+          "properties": {
+            "name": {
+              "type": "keyword"
+            },
+            "version": {
+              "type": "keyword"
+            }
+          }
+        },
+        "device": {
+          "properties": {
+            "model": {
+              "properties": {
+                "identifier": {
+                  "type": "keyword"
+                }
+              }
+            }
+          }
+        },
+        "screen": {
+          "type": "keyword"
+        },
+        "http": {
+          "properties": {
+            "request": {
+              "properties": {
+                "method": {
+                  "type": "keyword"
+                }
+              }
+            },
+            "response": {
+              "properties": {
+                "status_code": {
+                  "type": "long"
+                }
+              }
+            }
+          }
+        },
+        "url": {
+          "properties": {
+            "full": {
+              "type": "keyword"
+            },
+            "domain": {
+              "type": "keyword"
+            }
+          }
+        },
+        "error": {
+          "properties": {
+            "type": {
+              "type": "keyword"
+            },
+            "message": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 512
+                }
+              }
+            }
+          }
+        },
+        "task": {
+          "properties": {
+            "id": {
+              "type": "keyword"
+            },
+            "title_length": {
+              "type": "long"
+            }
+          }
+        },
+        "query_length": {
+          "type": "long"
+        },
+        "duration_ms": {
+          "type": "long"
+        },
+        "reason": {
+          "type": "keyword"
+        },
+        "launch": {
+          "properties": {
+            "autopilot": {
+              "type": "keyword"
+            }
+          }
+        },
+        "exit": {
+          "properties": {
+            "timestamp": {
+              "type": "long"
+            },
+            "description": {
+              "type": "text"
+            }
+          }
+        }
+      }
+    }
+  },
+  "_meta": {
+    "description": "Bare-HTTP mobile telemetry demo (mobile-telemetry-comparison)"
+  }
+}

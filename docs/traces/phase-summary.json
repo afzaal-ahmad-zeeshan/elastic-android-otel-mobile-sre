@@ -1,0 +1,106 @@
+{
+ "calm1": {
+  "n": 523,
+  "p50": 87.21825,
+  "p95": 104.65406279999999,
+  "p99": 107.71556772,
+  "status": {
+   "200": 304,
+   "201": 219
+  },
+  "backend_ms": {
+   "chaos.delay": 43502.248,
+   "POST /tasks": 18242.267,
+   "store.create": 2.627,
+   "POST /tasks/{id}/complete": 11317.39,
+   "store.complete": 1.559,
+   "GET /sync": 10075.759,
+   "store.sync": 1.86,
+   "GET /search": 2928.593,
+   "store.search": 0.511,
+   "DELETE /tasks/{id}": 812.698,
+   "store.delete": 0.106,
+   "GET /tasks": 303.993,
+   "store.list": 0.06
+  }
+ },
+ "errors": {
+  "n": 598,
+  "p50": 85.6184375,
+  "p95": 104.26053395000001,
+  "p99": 107.96878997999995,
+  "status": {
+   "200": 331,
+   "201": 197,
+   "500": 51,
+   "400": 19
+  },
+  "backend_ms": {
+   "chaos.delay": 47916.296,
+   "POST /tasks": 18047.672,
+   "store.create": 3.179,
+   "GET /sync": 12660.418,
+   "store.sync": 2.826,
+   "POST /tasks/{id}/complete": 9504.94,
+   "store.complete": 1.634,
+   "GET /search": 7177.056,
+   "store.search": 1.46,
+   "DELETE /tasks/{id}": 412.975,
+   "store.delete": 0.085,
+   "GET /tasks": 372.855,
+   "store.list": 0.048
+  }
+ },
+ "slow": {
+  "n": 376,
+  "p50": 89.327146,
+  "p95": 3091.684585,
+  "p99": 3103.83170925,
+  "status": {
+   "200": 180,
+   "201": 156,
+   "500": 28,
+   "400": 12
+  },
+  "backend_ms": {
+   "chaos.delay": 171856.333,
+   "POST /tasks": 80119.28,
+   "store.create": 1.926,
+   "POST /tasks/{id}/complete": 34326.434,
+   "store.complete": 0.965,
+   "GET /sync": 45390.982,
+   "store.sync": 1.302,
+   "GET /search": 5361.791,
+   "store.search": 0.479,
+   "GET /tasks": 6472.638,
+   "store.list": 0.079,
+   "DELETE /tasks/{id}": 316.212,
+   "store.delete": 0.046
+  }
+ },
+ "calm2": {
+  "n": 523,
+  "p50": 88.855958,
+  "p95": 107.01861670000001,
+  "p99": 111.27268102,
+  "status": {
+   "200": 311,
+   "201": 212
+  },
+  "backend_ms": {
+   "chaos.delay": 47106.496,
+   "POST /tasks": 19028.865,
+   "store.create": 2.536,
+   "POST /tasks/{id}/complete": 12634.006,
+   "store.complete": 1.824,
+   "GET /sync": 9737.106,
+   "store.sync": 1.877,
+   "GET /search": 4881.507,
+   "store.search": 0.908,
+   "DELETE /tasks/{id}": 709.191,
+   "store.delete": 0.089,
+   "GET /tasks": 298.952,
+   "store.list": 0.045
+  }
+ }
+}
